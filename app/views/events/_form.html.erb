@@ -1,0 +1,12 @@
+<%= form_for ([@company, @event]) do |f| %>
+
+<%= f.label :name %>
+<%= f.text_area :name %>
+
+<%= f.label :date %>
+<%= f.text_area :date %>
+
+<%= f.submit name_of_button %>
+<%= link_to "cancel", new_company_event_path %>
+
+<% end %>

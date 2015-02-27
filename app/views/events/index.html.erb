@@ -1,0 +1,17 @@
+<h1><%= @company.name %></h1>
+
+<div>
+</div>
+<div>
+  <h3><%= link_to "Add Event", new_company_event_path(@company) %></h3>
+</div>
+<div>
+  <h3><%= link_to "Back to Companies", companies_path(@companies) %></h3>
+</div>
+
+
+</br>
+<% @events.each do |event| %>
+<p><strong>Event:</strong> <%= event.name %></p>
+<p><strong>Date:</strong> <%= event.date %></p>
+<% end %>

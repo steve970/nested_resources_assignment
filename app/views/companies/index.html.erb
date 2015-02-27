@@ -1,0 +1,18 @@
+<h1>Companies</h1>
+
+<%= link_to "New Company", new_company_path(@company) %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Company</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @companies.each do |company| %>
+    <tr>
+      <td><%=link_to company.name, company_events_path(company) %></td>
+    </tr>
+      <% end %>
+  </tbody>
+</table>
